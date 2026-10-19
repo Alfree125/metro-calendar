@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/nero"
+    android:orientation="vertical">
+
+    <include layout="@layout/striscia" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="14dp">
+
+        <TextView
+            style="@style/TitoloFoglio"
+            android:text="@string/impostazioni" />
+
+        <ImageButton
+            android:id="@+id/btn_chiudi"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:background="@drawable/bg_cerchio_scuro"
+            android:contentDescription="@string/chiudi"
+            android:padding="11dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_chiudi"
+            app:tint="@color/bianco" />
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scorrimento"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/foglio"
+        android:clipToPadding="false">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="16dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="24dp">
+
+            <!-- Nome -->
+            <TextView
+                style="@style/EtichettaFoglio"
+                android:text="@string/nome_app" />
+
+            <EditText
+                android:id="@+id/in_nome_app"
+                style="@style/CampoFoglio"
+                android:hint="@string/app_name"
+                android:inputType="textCapWords"
+                android:maxLength="30"
+                android:maxLines="1"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="@string/nome_app_aiuto"
+                android:textColor="@color/inchiostro_tenue"
+                android:textSize="12sp" />
+
+            <!-- Icona -->
+            <TextView
+                style="@style/EtichettaFoglio"
+                android:layout_marginTop="24dp"
+                android:text="@string/icona" />
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:id="@+id/scelta_icone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" />
+            </HorizontalScrollView>
+
+            <TextView
+                android:id="@+id/aiuto_icona"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="@string/icona_aiuto"
+                android:textColor="@color/inchiostro_tenue"
+                android:textSize="12sp" />
+
+            <!-- Icona sulla home -->
+            <TextView
+                style="@style/EtichettaFoglio"
+                android:layout_marginTop="24dp"
+                android:text="@string/sezione_home" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="@string/home_aiuto"
+                android:textColor="@color/inchiostro_tenue"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/btn_home"
+                style="@style/PulsanteNero"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/aggiungi_alla_home" />
+
+            <!-- Widget -->
+            <TextView
+                style="@style/EtichettaFoglio"
+                android:layout_marginTop="24dp"
+                android:text="@string/sezione_widget" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="@string/widget_aiuto"
+                android:textColor="@color/inchiostro_tenue"
+                android:textSize="12sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_widget_piccolo"
+                    style="@style/PulsanteNero"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:text="@string/widget_piccolo"
+                    android:textSize="11sp" />
+
+                <Button
+                    android:id="@+id/btn_widget_medio"
+                    style="@style/PulsanteNero"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="1"
+                    android:text="@string/widget_medio"
+                    android:textSize="11sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_widget_grande"
+                    style="@style/PulsanteNero"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_weight="1"
+                    android:text="@string/widget_grande"
+                    android:textSize="11sp" />
+
+                <Button
+                    android:id="@+id/btn_widget_giornata"
+                    style="@style/PulsanteNero"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:text="@string/widget_giornata_pulsante"
+                    android:textSize="11sp" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_widget_giornata_larga"
+                style="@style/PulsanteNero"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/widget_giornata_larga_pulsante"
+                android:textSize="11sp" />
+
+            <!-- Widget gia' sulla home: si personalizzano da qui -->
+            <TextView
+                style="@style/EtichettaFoglio"
+                android:layout_marginTop="20dp"
+                android:text="@string/tuoi_widget" />
+
+            <LinearLayout
+                android:id="@+id/lista_widget"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+
+            <TextView
+                android:id="@+id/nessun_widget"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="@string/nessun_widget"
+                android:textColor="@color/inchiostro_tenue"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="@string/widget_aiuto_modifica"
+                android:textColor="@color/inchiostro_tenue"
+                android:textSize="12sp" />
+
+            <!-- Notifiche di promemoria -->
+            <TextView
+                style="@style/EtichettaFoglio"
+                android:layout_marginTop="24dp"
+                android:text="@string/sezione_notifiche" />
+
+            <com.google.android.material.materialswitch.MaterialSwitch
+                android:id="@+id/sw_notifiche"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="52dp"
+                android:text="@string/notifiche_promemoria"
+                android:textColor="@color/inchiostro"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/aiuto_notifiche"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/notifiche_aiuto"
+                android:textColor="@color/inchiostro_tenue"
+                android:textSize="12sp" />
+
+            <LinearLayout
+                android:id="@+id/riga_promemoria_predefinito"
+                style="@style/RigaFoglio"
+                android:layout_marginTop="4dp">
+
+                <TextView
+                    style="@style/TestoRiga"
+                    android:text="@string/promemoria_predefinito" />
+
+                <TextView
+                    android:id="@+id/val_promemoria_predefinito"
+                    style="@style/ValoreRiga"
+                    android:drawablePadding="2dp"
+                    app:drawableEndCompat="@drawable/ic_su_giu"
+                    app:drawableTint="#FF555555" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_prova_notifica"
+                style="@style/PulsanteNero"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="6dp"
+                android:text="@string/prova_notifica"
+                android:textSize="12sp" />
+
+            <!-- Lingua -->
+            <TextView
+                style="@style/EtichettaFoglio"
+                android:layout_marginTop="24dp"
+                android:text="@string/sezione_lingua" />
+
+            <RadioGroup
+                android:id="@+id/gruppo_lingua"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp">
+
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:id="@+id/lingua_en"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/lingua_inglese" />
+
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:id="@+id/lingua_it"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/lingua_italiano" />
+
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:id="@+id/lingua_sistema"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/lingua_sistema" />
+            </RadioGroup>
+
+            <Button
+                android:id="@+id/btn_salva"
+                style="@style/PulsanteNero"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:layout_marginTop="28dp"
+                android:text="@string/salva" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Anteprima del widget "giornata larga". Generato da strumenti/genera_widget.py -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/w_radice"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="UseAppTint">
+
+    <ImageView
+        android:id="@+id/w_sfondo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:src="@drawable/bg_widget"
+        android:importantForAccessibility="no" />
+
+    <LinearLayout
+        android:id="@+id/w_contenuto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="14dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:gravity="bottom"
+            android:orientation="horizontal">
+
+            <TextView
+                
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:maxLines="1"
+                android:textColor="@color/bianco"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:text="WED SEP 30" />
+
+            <TextView
+                
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:letterSpacing="0.05"
+                android:text="@string/widget_giornata_titolo"
+                android:textAllCaps="true"
+                android:textColor="@color/led_giallo"
+                android:textSize="10sp"
+                android:fontFamily="monospace"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                
+                android:layout_width="72dp"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:textColor="@color/led_grigio"
+                android:textSize="12sp"
+                android:text="8:30 AM"
+                android:fontFamily="monospace"
+                android:textStyle="bold" />
+
+            <FrameLayout
+                
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="6dp">
+
+                <ImageView
+                    
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:src="@drawable/anteprima_pallino"
+                    android:tint="#FF0039A6" />
+            </FrameLayout>
+
+            <TextView
+                
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/led_grigio"
+                android:textSize="13sp"
+                android:text="EARLY SYNC"
+                android:fontFamily="monospace"
+                android:textStyle="bold" />
+
+            <TextView
+                
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:maxLines="1"
+                android:textColor="@color/led_grigio"
+                android:textSize="12sp"
+                android:text="DEP"
+                android:fontFamily="monospace"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                
+                android:layout_width="72dp"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:textColor="@color/led_giallo"
+                android:textSize="12sp"
+                android:text="10:03 AM"
+                android:fontFamily="monospace"
+                android:textStyle="bold" />
+
+            <FrameLayout
+                
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="6dp">
+
+                <ImageView
+                    
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:src="@drawable/anteprima_pallino"
+                    android:tint="#FFFCCC0A" />
+            </FrameLayout>
+
+            <TextView
+                
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/led_giallo"
+                android:textSize="13sp"
+                android:text="COFFEE WITH TEAM"
+                android:fontFamily="monospace"
+                android:textStyle="bold" />
+
+            <TextView
+                
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:maxLines="1"
+                android:textColor="@color/led_verde"
+                android:textSize="12sp"
+                android:text="LIVE"
+                android:fontFamily="monospace"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                
+                android:layout_width="72dp"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:textColor="@color/led_giallo"
+                android:textSize="12sp"
+                android:text="10:31 AM"
+                android:fontFamily="monospace"
+                android:textStyle="bold" />
+
+            <FrameLayout
+                
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="6dp">
+
+                <ImageView
+                    
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:src="@drawable/anteprima_pallino"
+                    android:tint="#FF0039A6" />
+            </FrameLayout>
+
+            <TextView
+                
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/led_giallo"
+                android:textSize="13sp"
+                android:text="MORNING STANDUP"
+                android:fontFamily="monospace"
+                android:textStyle="bold" />
+
+            <TextView
+                
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:maxLines="1"
+                android:textColor="@color/led_giallo"
+                android:textSize="12sp"
+                android:text="18 MIN"
+                android:fontFamily="monospace"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                
+                android:layout_width="72dp"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:textColor="@color/led_giallo"
+                android:textSize="12sp"
+                android:text="11:05 AM"
+                android:fontFamily="monospace"
+                android:textStyle="bold" />
+
+            <FrameLayout
+                
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="6dp">
+
+                <ImageView
+                    
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:src="@drawable/anteprima_pallino"
+                    android:tint="#FFFF6319" />
+            </FrameLayout>
+
+            <TextView
+                
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/led_giallo"
+                android:textSize="13sp"
+                android:text="DEEP WORK"
+                android:fontFamily="monospace"
+                android:textStyle="bold" />
+
+            <TextView
+                
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:maxLines="1"
+                android:textColor="@color/led_giallo"
+                android:textSize="12sp"
+                android:text="52 MIN"
+                android:fontFamily="monospace"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+    </LinearLayout>
+</FrameLayout>

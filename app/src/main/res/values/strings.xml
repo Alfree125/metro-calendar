@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Testi come nel video (inglese). L'italiano e' in values-it e si sceglie dalle impostazioni. -->
+<resources>
+    <string name="app_name" translatable="false">Metro calendar</string>
+
+    <!-- Formati data (pattern java.time) -->
+    <string name="formato_titolo" translatable="false">EEEE,\nMMM d</string>
+    <string name="formato_breve" translatable="false">EEE MMM d</string>
+    <string name="formato_data_evento" translatable="false">MMM d, yyyy</string>
+
+    <!-- Barra in basso -->
+    <string name="nav_board">Board</string>
+    <string name="nav_lines">Lines</string>
+    <string name="nav_add">Add</string>
+
+    <!-- Permesso -->
+    <string name="permesso_spiegazione">To show and save events the app uses the phone calendar, the same one other apps see.</string>
+    <string name="permesso_consenti">Allow</string>
+    <string name="permesso_impostazioni">Open settings</string>
+
+    <!-- Board -->
+    <string name="scegli_giorno">Choose a day</string>
+    <string name="impostazioni">Settings</string>
+    <string name="oggi">Today</string>
+    <string name="partenze">Departures</string>
+    <string name="orario">Time</string>
+    <string name="tutto_il_giorno_n">◆ %d all-day</string>
+    <string name="live">Live</string>
+    <string name="min">min</string>
+    <string name="min_rimasti">min left</string>
+    <string name="ore">hr</string>
+    <string name="ore_rimaste">hr left</string>
+    <string name="partito">departed</string>
+    <string name="giorno_intero">day</string>
+    <string name="fino_alle">until</string>
+    <string name="tutto_il_giorno">All day</string>
+    <string name="intervallo">%1$s – %2$s</string>
+    <string name="mostra_partiti">Show %d departed</string>
+    <string name="nascondi_partiti">Hide departed</string>
+    <string name="nessuna_partenza">No departures</string>
+    <string name="nessuna_partenza_oggi">Nothing else on the board today.</string>
+    <string name="nessuna_partenza_giorno">Nothing scheduled on this day.</string>
+    <string name="suggerimento_tabellone">Swipe sideways to change day.</string>
+    <string name="senza_titolo">(Untitled)</string>
+
+    <!-- Scelta giorno (vista anno) -->
+    <string name="anno_precedente">Previous year</string>
+    <string name="anno_successivo">Next year</string>
+    <string name="progresso_anno">Day %1$d · %2$d to go</string>
+    <string name="descrizione_anno">Calendar for %1$d. Tap a day to open it on the board.</string>
+    <string name="suggerimento_anno">Tap a day to open it on the board, long-press to add an event. Swipe sideways to change year.</string>
+    <string name="chiudi">Close</string>
+
+    <!-- Lines -->
+    <string name="linee">Lines</string>
+    <string name="eventi_oggi">%d today</string>
+    <string name="nessuno_oggi">—</string>
+    <string name="nascosta">hidden</string>
+    <string name="aggiungi_linea">Add line</string>
+    <string name="modifica_linea">Edit line</string>
+    <string name="mostra_linea">Show on board</string>
+    <string name="nascondi_linea">Hide from board</string>
+    <string name="elimina_linea">Delete line</string>
+    <string name="conferma_elimina_linea">Delete the line \"%1$s\" and all its events?</string>
+    <string name="nessuna_linea">No lines yet: add one to get started.</string>
+
+    <!-- Edit line -->
+    <string name="titolo_nuova_linea">New Line</string>
+    <string name="titolo_modifica_linea">Edit Line</string>
+    <string name="anteprima">Preview</string>
+    <string name="linea_codice">Line %1$s</string>
+    <string name="dettagli_linea">Line details</string>
+    <string name="nome_categoria">Category name</string>
+    <string name="codice_linea">Line code</string>
+    <string name="colore">Color</string>
+    <string name="salva_linea">Save line</string>
+    <string name="linea_esterna">This line is a calendar from %1$s: name and color change only in this app.</string>
+    <string name="errore_nome">Enter a name</string>
+    <string name="errore_linea">Couldn\'t create the line</string>
+
+    <!-- Add event -->
+    <string name="titolo_nuovo">Add Event</string>
+    <string name="titolo_modifica">Edit Event</string>
+    <string name="nome_evento">Event name</string>
+    <string name="campo_titolo">What\'s happening?</string>
+    <string name="inizio">Starts</string>
+    <string name="fine">Ends</string>
+    <string name="campo_durata">Duration</string>
+    <string name="campo_linea">Line</string>
+    <string name="luogo_e_note">Location &amp; notes</string>
+    <string name="campo_luogo">Location</string>
+    <string name="campo_note">Notes</string>
+    <string name="salva_evento">Save event</string>
+    <string name="ripristina">Reset</string>
+    <string name="elimina">Delete</string>
+    <string name="annulla">Cancel</string>
+    <string name="crea">Create</string>
+    <string name="errore_titolo">Give it a name</string>
+    <string name="errore_fine">The end is before the start</string>
+    <string name="errore_salvataggio">Couldn\'t save the event</string>
+    <string name="errore_lettura">Event not found</string>
+    <string name="evento_ricorrente">Repeating event: you can change name, location and notes here. Date, time and repetition change in the app that created it.</string>
+    <string name="conferma_elimina">Delete this event?</string>
+    <string name="conferma_elimina_ricorrente">Delete this event and all its repetitions?</string>
+    <string name="nessuna_linea_titolo">No lines</string>
+    <string name="nessuna_linea_evento">There\'s no calendar on the phone to save to. Create the line \"Personal\"?</string>
+    <string name="nome_linea_predefinita">Personal</string>
+    <string name="durata_min">%1$d min</string>
+    <string name="durata_ore">%1$d hr</string>
+    <string name="durata_ore_min">%1$d hr %2$d min</string>
+    <string name="nessun_promemoria">None</string>
+    <string name="promemoria_inizio">At start</string>
+    <string name="promemoria_min">%1$d min before</string>
+    <string name="promemoria_ore">%1$d hr before</string>
+    <string name="promemoria_giorno">1 day before</string>
+
+    <!-- Settings -->
+    <string name="sezione_app">App</string>
+    <string name="nome_app">App name</string>
+    <string name="nome_app_aiuto">Shown at the top of the board, on widgets and on the home screen icon you create below.</string>
+    <string name="icona">Icon</string>
+    <string name="icona_aiuto">The icon in the app list changes in a few seconds. Some launchers move it back to the app drawer: add it again to the home screen.</string>
+    <string name="icona_foto">Photo</string>
+    <string name="icona_foto_aiuto">A photo can be used only for the home screen icon below.</string>
+    <string name="sezione_home">Home screen icon</string>
+    <string name="home_aiuto">Android doesn\'t let apps rename themselves in the app list, so here you get an icon on the home screen with your name and your icon.</string>
+    <string name="aggiungi_alla_home">Add to home screen</string>
+    <string name="home_non_supportato">Your launcher doesn\'t support adding icons from apps</string>
+    <string name="sezione_widget">Widgets</string>
+    <string name="widget_aiuto">Departure boards for the home screen, updated every minute.</string>
+    <string name="widget_piccolo">Small</string>
+    <string name="widget_medio">Medium</string>
+    <string name="widget_grande">Large</string>
+    <string name="widget_non_supportato">Add the widget by long-pressing the home screen → Widgets</string>
+    <string name="sezione_lingua">Language</string>
+    <string name="lingua_inglese">English</string>
+    <string name="lingua_italiano" translatable="false">Italiano</string>
+    <string name="lingua_sistema">Same as the phone</string>
+    <string name="salva">Save</string>
+
+    <!-- Widget -->
+    <string name="widget_ln">Ln</string>
+    <string name="widget_evento">Event</string>
+    <string name="widget_min">Min</string>
+    <string name="widget_altri">+%d</string>
+    <string name="widget_vuoto">No more departures</string>
+    <string name="widget_permesso">Open the app to allow calendar access</string>
+    <string name="widget_descrizione_piccolo">Next four departures</string>
+    <string name="widget_descrizione_medio">Next departures, wide</string>
+    <string name="widget_descrizione_grande">The whole day board</string>
+    <!-- Personalizzazione widget -->
+    <string name="personalizza_widget">Widget</string>
+    <string name="personalizza">Customize</string>
+    <string name="dimensione_testo">Text size</string>
+    <string name="righe">Rows</string>
+    <string name="opacita_sfondo">Background opacity</string>
+    <string name="percentuale">%1$d%%</string>
+    <string name="colore_sfondo">Background color</string>
+    <string name="colore_testo">Text color</string>
+    <string name="mostra_pallini">Show line bullets</string>
+    <string name="mostra_data">Show date</string>
+    <string name="mostra_tutto_giorno">Show all-day events</string>
+    <string name="mostra_piede">Show footer (+N and app name)</string>
+    <string name="widget_dimensione_aiuto">To make the widget bigger or smaller on the home screen, long-press it and drag its edges.</string>
+    <string name="salva_widget">Save widget</string>
+    <string name="widget_giorno">Day</string>
+    <string name="tuoi_widget">Your widgets</string>
+    <string name="nessun_widget">No widgets on the home screen yet.</string>
+    <string name="widget_aiuto_modifica">Tap a widget here, or long-press it on the home screen and tap the pencil, to customize it.</string>
+    <string name="widget_numero">%1$s widget · #%2$d</string>
+
+    <!-- Promemoria e notifiche -->
+    <string name="promemoria_titolo">Reminders</string>
+    <string name="aggiungi_promemoria">Add reminder</string>
+    <string name="rimuovi_promemoria">Remove reminder</string>
+    <string name="promemoria_giorni">%1$d days before</string>
+    <string name="promemoria_settimana">1 week before</string>
+    <string name="sezione_notifiche">Notifications</string>
+    <string name="notifiche_promemoria">Reminder notifications</string>
+    <string name="notifiche_aiuto">The app notifies you before each departure, using the reminders of the event. If Google Calendar notifies you too, turn one of the two off.</string>
+    <string name="notifiche_bloccate">Notifications are turned off for this app in the phone settings. Tap "Test notification" to open them.</string>
+    <string name="promemoria_predefinito">Default reminder</string>
+    <string name="prova_notifica">Test notification</string>
+    <string name="canale_promemoria">Event reminders</string>
+    <string name="canale_descrizione">Departure alerts for your events</string>
+    <string name="notifica_parte_tra">Departs in %1$s</string>
+    <string name="notifica_in_partenza">Departing now</string>
+    <string name="rimanda">Snooze %1$d min</string>
+    <string name="notifica_prova_titolo">Coffee with Team</string>
+    <string name="notifica_prova_luogo">Kitchen 2F</string>
+    <string name="widget_giornata">Full day</string>
+    <string name="widget_giornata_pulsante">Full day 2×4</string>
+    <string name="widget_giornata_titolo">Today\'s departures</string>
+    <string name="widget_descrizione_giornata">The whole day, from morning to night</string>
+    <string name="widget_partito">Dep</string>
+    <string name="mostra_passati">Show departed events</string>
+    <string name="widget_giornata_larga">Full day wide</string>
+    <string name="widget_giornata_larga_pulsante">Full day 4×2</string>
+    <string name="widget_descrizione_giornata_larga">The whole day, one line per event</string>
+</resources>

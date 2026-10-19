@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Cartello della metro: filetto bianco in alto e tre pallini di linea -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp" android:height="108dp"
+    android:viewportWidth="108" android:viewportHeight="108">
+    <path android:fillColor="#FFFFFFFF" android:pathData="M30,38h48v3h-48z" />
+    <path android:fillColor="#FF0039A6" android:pathData="M37,58m-8,0a8,8 0 1,1 16,0a8,8 0 1,1 -16,0" />
+    <path android:fillColor="#FFFF6319" android:pathData="M54,58m-8,0a8,8 0 1,1 16,0a8,8 0 1,1 -16,0" />
+    <path android:fillColor="#FFFCCC0A" android:pathData="M71,58m-8,0a8,8 0 1,1 16,0a8,8 0 1,1 -16,0" />
+    <path android:fillColor="#FFFFFFFF" android:pathData="M30,72h30v3h-30z" />
+</vector>

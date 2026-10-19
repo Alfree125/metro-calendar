@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Anteprima del widget "medio". Generato da strumenti/genera_widget.py -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/w_radice"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="UseAppTint">
+
+    <ImageView
+        android:id="@+id/w_sfondo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:src="@drawable/bg_widget"
+        android:importantForAccessibility="no" />
+
+    <LinearLayout
+        android:id="@+id/w_contenuto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="14dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                
+                android:layout_width="24dp"
+                android:layout_height="wrap_content"
+                android:letterSpacing="0.05"
+                android:text="@string/widget_ln"
+                android:textAllCaps="true"
+                android:textColor="@color/led_giallo"
+                android:textSize="10sp"
+                android:fontFamily="monospace"
+                android:textStyle="bold" />
+
+            <TextView
+                
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:letterSpacing="0.05"
+                android:text="@string/widget_evento"
+                android:textAllCaps="true"
+                android:textColor="@color/led_giallo"
+                android:textSize="10sp"
+                android:fontFamily="monospace"
+                android:textStyle="bold" />
+
+            <TextView
+                
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:letterSpacing="0.05"
+                android:text="@string/widget_min"
+                android:textAllCaps="true"
+                android:textColor="@color/led_giallo"
+                android:textSize="10sp"
+                android:fontFamily="monospace"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                
+                android:layout_width="24dp"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/anteprima_pallino"
+                    android:tint="#FFFCCC0A" />
+            </FrameLayout>
+
+            <TextView
+                
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/led_giallo"
+                android:textSize="13sp"
+                android:text="COFFEE WITH TEAM"
+                android:fontFamily="monospace"
+                android:textStyle="bold" />
+
+            <TextView
+                
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:textColor="@color/led_verde"
+                android:textSize="13sp"
+                android:text="LIVE"
+                android:fontFamily="monospace"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                
+                android:layout_width="24dp"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/anteprima_pallino"
+                    android:tint="#FF0039A6" />
+            </FrameLayout>
+
+            <TextView
+                
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/led_giallo"
+                android:textSize="13sp"
+                android:text="CROSS-FUNCTIONAL LAUNCH READINESS"
+                android:fontFamily="monospace"
+                android:textStyle="bold" />
+
+            <TextView
+                
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:textColor="@color/led_verde"
+                android:textSize="13sp"
+                android:text="LIVE"
+                android:fontFamily="monospace"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                
+                android:layout_width="24dp"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/anteprima_pallino"
+                    android:tint="#FF0039A6" />
+            </FrameLayout>
+
+            <TextView
+                
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/led_giallo"
+                android:textSize="13sp"
+                android:text="MORNING STANDUP"
+                android:fontFamily="monospace"
+                android:textStyle="bold" />
+
+            <TextView
+                
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:textColor="@color/led_giallo"
+                android:textSize="13sp"
+                android:text="18"
+                android:fontFamily="monospace"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                
+                android:layout_width="24dp"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/anteprima_pallino"
+                    android:tint="#FFFF6319" />
+            </FrameLayout>
+
+            <TextView
+                
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/led_giallo"
+                android:textSize="13sp"
+                android:text="DEEP WORK"
+                android:fontFamily="monospace"
+                android:textStyle="bold" />
+
+            <TextView
+                
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:textColor="@color/led_giallo"
+                android:textSize="13sp"
+                android:text="52"
+                android:fontFamily="monospace"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/nero"
+    android:orientation="vertical">
+
+    <include layout="@layout/striscia" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="14dp">
+
+        <TextView
+            android:id="@+id/titolo_foglio"
+            style="@style/TitoloFoglio"
+            android:text="@string/personalizza_widget" />
+
+        <ImageButton
+            android:id="@+id/btn_chiudi"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:background="@drawable/bg_cerchio_scuro"
+            android:contentDescription="@string/chiudi"
+            android:padding="11dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_chiudi"
+            app:tint="@color/bianco" />
+    </LinearLayout>
+
+    <!-- Anteprima dal vivo su un finto sfondo della home -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/nero"
+        android:paddingHorizontal="16dp"
+        android:paddingBottom="14dp">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_anteprima_widget"
+            android:padding="14dp">
+
+            <FrameLayout
+                android:id="@+id/anteprima"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_gravity="center" />
+        </FrameLayout>
+    </FrameLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scorrimento"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/foglio"
+        android:clipToPadding="false">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="16dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="24dp">
+
+            <TextView
+                style="@style/EtichettaFoglio"
+                android:text="@string/dimensione_testo" />
+
+            <com.google.android.material.button.MaterialButtonToggleGroup
+                android:id="@+id/gruppo_scala"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:selectionRequired="true"
+                app:singleSelection="true" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/EtichettaFoglio"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/righe" />
+
+                <TextView
+                    android:id="@+id/val_righe"
+                    style="@style/EtichettaFoglio"
+                    android:textColor="@color/inchiostro" />
+            </LinearLayout>
+
+            <com.google.android.material.slider.Slider
+                android:id="@+id/slider_righe"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:stepSize="1"
+                android:valueFrom="1"
+                android:valueTo="8"
+                app:labelBehavior="gone"
+                app:tickColorActive="@color/bianco"
+                app:tickColorInactive="@color/inchiostro_tenue"
+                app:trackColorInactive="@color/carta_filetto" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/EtichettaFoglio"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/opacita_sfondo" />
+
+                <TextView
+                    android:id="@+id/val_opacita"
+                    style="@style/EtichettaFoglio"
+                    android:textColor="@color/inchiostro" />
+            </LinearLayout>
+
+            <com.google.android.material.slider.Slider
+                android:id="@+id/slider_opacita"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:stepSize="5"
+                android:valueFrom="0"
+                android:valueTo="100"
+                app:labelBehavior="gone"
+                app:tickColorActive="@color/bianco"
+                app:tickColorInactive="@color/inchiostro_tenue"
+                app:trackColorInactive="@color/carta_filetto" />
+
+            <TextView
+                style="@style/EtichettaFoglio"
+                android:layout_marginTop="12dp"
+                android:text="@string/colore_sfondo" />
+
+            <LinearLayout
+                android:id="@+id/colori_sfondo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal" />
+
+            <TextView
+                style="@style/EtichettaFoglio"
+                android:layout_marginTop="20dp"
+                android:text="@string/colore_testo" />
+
+            <LinearLayout
+                android:id="@+id/colori_testo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal" />
+
+            <com.google.android.material.materialswitch.MaterialSwitch
+                android:id="@+id/sw_pallini"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:minHeight="52dp"
+                android:text="@string/mostra_pallini"
+                android:textColor="@color/inchiostro"
+                android:textSize="15sp" />
+
+            <com.google.android.material.materialswitch.MaterialSwitch
+                android:id="@+id/sw_data"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="52dp"
+                android:text="@string/mostra_data"
+                android:textColor="@color/inchiostro"
+                android:textSize="15sp" />
+
+            <com.google.android.material.materialswitch.MaterialSwitch
+                android:id="@+id/sw_tutto_giorno"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="52dp"
+                android:text="@string/mostra_tutto_giorno"
+                android:textColor="@color/inchiostro"
+                android:textSize="15sp" />
+
+            <com.google.android.material.materialswitch.MaterialSwitch
+                android:id="@+id/sw_piede"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="52dp"
+                android:text="@string/mostra_piede"
+                android:textColor="@color/inchiostro"
+                android:textSize="15sp" />
+
+            <com.google.android.material.materialswitch.MaterialSwitch
+                android:id="@+id/sw_passati"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="52dp"
+                android:text="@string/mostra_passati"
+                android:textColor="@color/inchiostro"
+                android:textSize="15sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/widget_dimensione_aiuto"
+                android:textColor="@color/inchiostro_tenue"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/btn_salva"
+                style="@style/PulsanteNero"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:layout_marginTop="24dp"
+                android:text="@string/salva_widget" />
+
+            <Button
+                android:id="@+id/btn_ripristina"
+                style="@style/Widget.Material3.Button.TextButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:letterSpacing="0.1"
+                android:text="@string/ripristina"
+                android:textAllCaps="true"
+                android:textColor="@color/inchiostro_tenue"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

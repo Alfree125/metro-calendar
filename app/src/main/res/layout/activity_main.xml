@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/nero"
+    android:orientation="vertical">
+
+    <include layout="@layout/striscia" />
+
+    <!-- Avviso permesso calendario -->
+    <LinearLayout
+        android:id="@+id/avviso_permesso"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/giallo"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingVertical="8dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="8dp"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/permesso_spiegazione"
+            android:textColor="@color/inchiostro"
+            android:textSize="13sp" />
+
+        <Button
+            android:id="@+id/btn_permesso"
+            style="@style/Widget.Material3.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/permesso_consenti"
+            android:textColor="@color/inchiostro"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <include
+            android:id="@+id/pagina_tabellone"
+            layout="@layout/pagina_tabellone" />
+
+        <include
+            android:id="@+id/pagina_linee"
+            layout="@layout/pagina_linee"
+            android:visibility="gone" />
+    </FrameLayout>
+
+    <!-- Barra in basso come nel video: BOARD, LINES, ADD -->
+    <LinearLayout
+        android:id="@+id/barra_nav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/nero"
+        android:orientation="horizontal">
+
+        <include
+            android:id="@+id/nav_board"
+            layout="@layout/voce_nav" />
+
+        <include
+            android:id="@+id/nav_lines"
+            layout="@layout/voce_nav" />
+
+        <include
+            android:id="@+id/nav_add"
+            layout="@layout/voce_nav" />
+    </LinearLayout>
+</LinearLayout>

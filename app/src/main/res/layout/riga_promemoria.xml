@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Un promemoria nel modulo evento: campanella, "10 min before", X per toglierlo -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:minHeight="44dp"
+    android:orientation="horizontal"
+    android:paddingStart="4dp">
+
+    <ImageView
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:importantForAccessibility="no"
+        android:src="@drawable/ic_campanella"
+        app:tint="@color/inchiostro_tenue" />
+
+    <TextView
+        android:id="@+id/testo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_weight="1"
+        android:fontFeatureSettings="tnum"
+        android:textColor="@color/inchiostro"
+        android:textSize="15sp" />
+
+    <ImageButton
+        android:id="@+id/btn_rimuovi"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="@string/rimuovi_promemoria"
+        android:src="@drawable/ic_chiudi"
+        app:tint="@color/inchiostro_tenue" />
+</LinearLayout>

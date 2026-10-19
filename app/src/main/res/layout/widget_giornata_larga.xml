@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Widget "giornata larga" 4x2: tutta la giornata. Generato da strumenti/genera_widget.py -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/w_radice"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/w_sfondo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:src="@drawable/bg_widget"
+        android:importantForAccessibility="no" />
+
+    <LinearLayout
+        android:id="@+id/w_contenuto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="14dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:gravity="bottom"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/w_data"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:maxLines="1"
+                android:textColor="@color/bianco"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                 />
+
+            <TextView
+                android:id="@+id/g_titolo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:letterSpacing="0.05"
+                android:text="@string/widget_giornata_titolo"
+                android:textAllCaps="true"
+                android:textColor="@color/led_giallo"
+                android:textSize="10sp"
+                android:fontFamily="monospace"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/g_r0"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/g_r0_o"
+                android:layout_width="72dp"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:textColor="@color/led_giallo"
+                android:textSize="12sp"
+                
+                android:fontFamily="monospace"
+                android:textStyle="bold" />
+
+            <FrameLayout
+                android:id="@+id/g_r0_c"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="6dp">
+
+                <ImageView
+                    android:id="@+id/g_r0_p"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                     />
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/g_r0_t"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/led_giallo"
+                android:textSize="13sp"
+                
+                android:fontFamily="monospace"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/g_r0_s"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:maxLines="1"
+                android:textColor="@color/led_giallo"
+                android:textSize="12sp"
+                
+                android:fontFamily="monospace"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/g_r1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/g_r1_o"
+                android:layout_width="72dp"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:textColor="@color/led_giallo"
+                android:textSize="12sp"
+                
+                android:fontFamily="monospace"
+                android:textStyle="bold" />
+
+            <FrameLayout
+                android:id="@+id/g_r1_c"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="6dp">
+
+                <ImageView
+                    android:id="@+id/g_r1_p"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                     />
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/g_r1_t"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/led_giallo"
+                android:textSize="13sp"
+                
+                android:fontFamily="monospace"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/g_r1_s"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:maxLines="1"
+                android:textColor="@color/led_giallo"
+                android:textSize="12sp"
+                
+                android:fontFamily="monospace"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/g_r2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/g_r2_o"
+                android:layout_width="72dp"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:textColor="@color/led_giallo"
+                android:textSize="12sp"
+                
+                android:fontFamily="monospace"
+                android:textStyle="bold" />
+
+            <FrameLayout
+                android:id="@+id/g_r2_c"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="6dp">
+
+                <ImageView
+                    android:id="@+id/g_r2_p"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                     />
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/g_r2_t"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/led_giallo"
+                android:textSize="13sp"
+                
+                android:fontFamily="monospace"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/g_r2_s"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:maxLines="1"
+                android:textColor="@color/led_giallo"
+                android:textSize="12sp"
+                
+                android:fontFamily="monospace"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/g_r3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/g_r3_o"
+                android:layout_width="72dp"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:textColor="@color/led_giallo"
+                android:textSize="12sp"
+                
+                android:fontFamily="monospace"
+                android:textStyle="bold" />
+
+            <FrameLayout
+                android:id="@+id/g_r3_c"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="6dp">
+
+                <ImageView
+                    android:id="@+id/g_r3_p"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                     />
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/g_r3_t"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/led_giallo"
+                android:textSize="13sp"
+                
+                android:fontFamily="monospace"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/g_r3_s"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:maxLines="1"
+                android:textColor="@color/led_giallo"
+                android:textSize="12sp"
+                
+                android:fontFamily="monospace"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/g_r4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/g_r4_o"
+                android:layout_width="72dp"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:textColor="@color/led_giallo"
+                android:textSize="12sp"
+                
+                android:fontFamily="monospace"
+                android:textStyle="bold" />
+
+            <FrameLayout
+                android:id="@+id/g_r4_c"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="6dp">
+
+                <ImageView
+                    android:id="@+id/g_r4_p"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                     />
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/g_r4_t"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/led_giallo"
+                android:textSize="13sp"
+                
+                android:fontFamily="monospace"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/g_r4_s"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:maxLines="1"
+                android:textColor="@color/led_giallo"
+                android:textSize="12sp"
+                
+                android:fontFamily="monospace"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/g_r5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/g_r5_o"
+                android:layout_width="72dp"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:textColor="@color/led_giallo"
+                android:textSize="12sp"
+                
+                android:fontFamily="monospace"
+                android:textStyle="bold" />
+
+            <FrameLayout
+                android:id="@+id/g_r5_c"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="6dp">
+
+                <ImageView
+                    android:id="@+id/g_r5_p"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                     />
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/g_r5_t"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/led_giallo"
+                android:textSize="13sp"
+                
+                android:fontFamily="monospace"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/g_r5_s"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:maxLines="1"
+                android:textColor="@color/led_giallo"
+                android:textSize="12sp"
+                
+                android:fontFamily="monospace"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/w_vuoto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="monospace"
+            android:textAllCaps="true"
+            android:textColor="@color/led_grigio"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:id="@+id/w_piede"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/w_altri"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/bianco"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                 />
+
+            <TextView
+                android:id="@+id/w_nome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/led_grigio"
+                android:textSize="11sp"
+                 />
+        </LinearLayout>
+
+    </LinearLayout>
+</FrameLayout>

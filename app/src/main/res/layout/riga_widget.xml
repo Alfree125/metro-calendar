@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Un widget sulla home, nelle impostazioni: nome e "Personalizza" -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/RigaFoglio">
+
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:importantForAccessibility="no"
+        android:src="@drawable/ic_tabellone"
+        app:tint="@color/inchiostro" />
+
+    <TextView
+        android:id="@+id/nome"
+        style="@style/TestoRiga"
+        android:layout_marginStart="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:letterSpacing="0.1"
+        android:text="@string/personalizza"
+        android:textAllCaps="true"
+        android:textColor="@color/inchiostro"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+</LinearLayout>

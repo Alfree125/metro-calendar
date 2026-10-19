@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Stile segnaletica: nero, bianco e giallo, sempre uguale (niente colori dinamici) -->
+    <style name="Theme.CalendarioAnno" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimary">@color/inchiostro</item>
+        <item name="colorOnPrimary">@color/bianco</item>
+        <item name="colorPrimaryContainer">@color/giallo</item>
+        <item name="colorOnPrimaryContainer">@color/inchiostro</item>
+        <item name="colorSecondary">@color/inchiostro</item>
+        <item name="colorOnSecondary">@color/bianco</item>
+        <item name="colorSecondaryContainer">@color/giallo</item>
+        <item name="colorOnSecondaryContainer">@color/inchiostro</item>
+        <item name="colorTertiary">@color/inchiostro</item>
+        <item name="colorOnTertiary">@color/bianco</item>
+        <item name="colorTertiaryContainer">@color/giallo</item>
+        <item name="colorOnTertiaryContainer">@color/inchiostro</item>
+        <item name="colorSurface">@color/bianco</item>
+        <item name="colorOnSurface">@color/inchiostro</item>
+        <item name="colorOnSurfaceVariant">@color/inchiostro_tenue</item>
+        <!-- Menu a tendina e finestre: fondo chiaro fisso, cosi' il testo scuro si legge anche col tema scuro -->
+        <item name="colorSurfaceContainerLowest">@color/bianco</item>
+        <item name="colorSurfaceContainerLow">@color/bianco</item>
+        <item name="colorSurfaceContainer">@color/bianco</item>
+        <item name="colorSurfaceContainerHigh">@color/carta</item>
+        <item name="colorSurfaceContainerHighest">@color/carta</item>
+        <item name="colorSurfaceVariant">@color/carta</item>
+        <item name="android:textColorPrimary">@color/inchiostro</item>
+        <item name="android:textColorSecondary">@color/inchiostro_tenue</item>
+        <item name="popupMenuStyle">@style/MenuChiaro</item>
+        <item name="listPopupWindowStyle">@style/ListaChiara</item>
+        <item name="android:colorBackground">@color/nero</item>
+        <item name="android:windowBackground">@color/nero</item>
+        <item name="colorOutline">@color/inchiostro_tenue</item>
+        <!-- I colori da cartello valgono anche col tema scuro: il sistema non deve scurire l'app da solo
+             (su Android 16/17 lo "scuro forzato" rendeva marrone il giallo e invertiva i testi) -->
+        <item name="android:forceDarkAllowed" tools:targetApi="29">false</item>
+        <item name="android:isLightTheme" tools:targetApi="29">false</item>
+    </style>
+
+    <style name="MenuChiaro" parent="Widget.Material3.PopupMenu">
+        <item name="android:popupBackground">@drawable/bg_menu</item>
+    </style>
+
+    <style name="ListaChiara" parent="Widget.Material3.PopupMenu.ListPopupWindow">
+        <item name="android:popupBackground">@drawable/bg_menu</item>
+    </style>
+
+    <!-- Testo piccolo maiuscolo spaziato, come le intestazioni dei cartelli -->
+    <style name="Didascalia">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">0.1</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">@color/grigio</item>
+    </style>
+
+    <style name="TitoloCartello">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">28sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/bianco</item>
+        <item name="android:letterSpacing">-0.01</item>
+    </style>
+
+    <style name="IconaCartello" parent="Widget.Material3.Button.IconButton">
+        <item name="iconTint">@color/bianco</item>
+    </style>
+
+    <style name="PulsanteCartello" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="android:textColor">@color/bianco</item>
+        <item name="strokeColor">@color/bianco</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">0.1</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="cornerRadius">4dp</item>
+    </style>
+
+    <style name="PulsanteGiallo" parent="Widget.Material3.Button">
+        <item name="backgroundTint">@color/giallo</item>
+        <item name="android:textColor">@color/inchiostro</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">0.1</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="cornerRadius">4dp</item>
+    </style>
+
+    <style name="Navigazione" parent="Widget.Material3.BottomNavigationView">
+        <item name="android:background">@color/nero</item>
+        <item name="backgroundTint">@color/nero</item>
+        <item name="itemIconTint">@color/navigazione</item>
+        <item name="itemTextColor">@color/navigazione</item>
+        <item name="itemActiveIndicatorStyle">@null</item>
+        <item name="itemTextAppearanceActive">@style/TestoNavigazione</item>
+        <item name="itemTextAppearanceInactive">@style/TestoNavigazione</item>
+        <item name="labelVisibilityMode">labeled</item>
+        <item name="elevation">0dp</item>
+    </style>
+
+    <style name="TestoNavigazione" parent="TextAppearance.Material3.LabelSmall">
+        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">0.1</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="textAllCaps">true</item>
+    </style>
+
+    <!-- Foglio bianco dei moduli (Add Event, Edit Line, Settings) -->
+    <style name="EtichettaFoglio">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">9sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">0.14</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">@color/etichetta_foglio</item>
+    </style>
+
+    <style name="RigaFoglio">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minHeight">52dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:background">?attr/selectableItemBackground</item>
+    </style>
+
+    <style name="TestoRiga">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/inchiostro</item>
+    </style>
+
+    <style name="ValoreRiga">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">#FF555555</item>
+        <item name="android:fontFeatureSettings">tnum</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">8dp</item>
+        <item name="android:background">?attr/selectableItemBackground</item>
+    </style>
+
+    <style name="CampoFoglio">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/bg_campo_foglio</item>
+        <item name="android:paddingTop">6dp</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/inchiostro</item>
+        <item name="android:textColorHint">#FFB0B0B0</item>
+        <item name="android:importantForAutofill" tools:targetApi="26">no</item>
+    </style>
+
+    <style name="PulsanteNero" parent="Widget.Material3.Button">
+        <item name="backgroundTint">@color/inchiostro</item>
+        <item name="android:textColor">@color/bianco</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">0.1</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="cornerRadius">6dp</item>
+    </style>
+
+    <style name="TitoloFoglio">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textSize">30sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/bianco</item>
+    </style>
+
+    <!-- Modulo evento -->
+    <style name="Campo" parent="Widget.Material3.TextInputLayout.OutlinedBox">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">12dp</item>
+        <item name="boxCornerRadiusTopStart">4dp</item>
+        <item name="boxCornerRadiusTopEnd">4dp</item>
+        <item name="boxCornerRadiusBottomStart">4dp</item>
+        <item name="boxCornerRadiusBottomEnd">4dp</item>
+    </style>
+
+    <style name="CampoMenu" parent="Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">12dp</item>
+        <item name="boxCornerRadiusTopStart">4dp</item>
+        <item name="boxCornerRadiusTopEnd">4dp</item>
+        <item name="boxCornerRadiusBottomStart">4dp</item>
+        <item name="boxCornerRadiusBottomEnd">4dp</item>
+    </style>
+
+    <style name="EtichettaModulo">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/inchiostro</item>
+    </style>
+
+    <style name="PulsanteValore" parent="Widget.Material3.Button.TextButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/inchiostro</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:fontFeatureSettings">tnum</item>
+        <item name="backgroundTint">@color/carta</item>
+        <item name="cornerRadius">4dp</item>
+        <item name="android:layout_marginStart">8dp</item>
+    </style>
+</resources>
