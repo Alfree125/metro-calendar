@@ -17,35 +17,18 @@ public class RicevitorePromemoria extends BroadcastReceiver {
 
     @Override
     public void onReceive(Context context, Intent intent) {
-        String azione = intent.getAction();
-        if (azione == null) return;
+        // Esportato per forza (EVENT_REMINDER arriva dal provider calendario): niente azioni
+        // interne qui, altrimenti un'altra app potrebbe forgiarle. Quelle stanno in RicevitoreAzioni.
+        if (!CalendarContract.ACTION_EVENT_REMINDER.equals(intent.getAction())) return;
+        if (!Preferenze.notificheAttive(context)) return;
         PendingResult risultato = goAsync();
         new Thread(() -> {
             try {
-                gestisci(context, intent, azione);
+                avvisiDi(context, intent);
             } finally {
                 risultato.finish();
             }
         }).start();
-    }
-
-    private static void gestisci(Context c, Intent intent, String azione) {
-        long idEvento = intent.getLongExtra(Promemoria.EXTRA_EVENTO, -1);
-        long inizio = intent.getLongExtra(Promemoria.EXTRA_INIZIO, 0);
-        long fine = intent.getLongExtra(Promemoria.EXTRA_FINE, 0);
-        switch (azione) {
-            case Promemoria.AZIONE_RIMANDA:
-                Promemoria.rimanda(c, idEvento, inizio, fine);
-                return;
-            case Promemoria.AZIONE_RIPROPONI:
-                Promemoria.notifica(c, idEvento, inizio, fine);
-                return;
-            case CalendarContract.ACTION_EVENT_REMINDER:
-                if (Preferenze.notificheAttive(c)) avvisiDi(c, intent);
-                return;
-            default:
-                break;
-        }
     }
 
     /** Tutti gli avvisi programmati per l'istante del promemoria (piu' eventi possono scattare insieme). */

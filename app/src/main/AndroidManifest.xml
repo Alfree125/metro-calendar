@@ -8,7 +8,7 @@
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
 
     <application
-        android:allowBackup="true"
+        android:allowBackup="false"
         android:enableOnBackInvokedCallback="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -195,6 +195,11 @@
                 <action android:name="android.intent.action.TIMEZONE_CHANGED" />
             </intent-filter>
         </receiver>
+
+        <!-- Snooze e notifica riproposta: non esportato, solo i PendingIntent dell'app lo chiamano -->
+        <receiver
+            android:name=".RicevitoreAzioni"
+            android:exported="false" />
 
         <!-- Promemoria: il calendario di sistema avvisa quando scatta un promemoria di un evento -->
         <receiver

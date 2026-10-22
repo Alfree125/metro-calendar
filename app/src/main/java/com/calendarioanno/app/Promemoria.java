@@ -131,7 +131,7 @@ final class Promemoria {
                 PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE));
 
         if (idEvento >= 0 && !tuttoIlGiorno && adesso < fine) {
-            Intent rimanda = new Intent(c, RicevitorePromemoria.class).setAction(AZIONE_RIMANDA)
+            Intent rimanda = new Intent(c, RicevitoreAzioni.class).setAction(AZIONE_RIMANDA)
                     .putExtra(EXTRA_EVENTO, idEvento).putExtra(EXTRA_INIZIO, inizio).putExtra(EXTRA_FINE, fine);
             n.addAction(R.drawable.ic_campanella, c.getString(R.string.rimanda, MINUTI_RIMANDA),
                     PendingIntent.getBroadcast(c, id, rimanda, PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE));
@@ -146,7 +146,7 @@ final class Promemoria {
     /** Toglie la notifica e la ripropone fra qualche minuto. */
     static void rimanda(Context c, long idEvento, long inizio, long fine) {
         NotificationManagerCompat.from(c).cancel(idNotifica(idEvento, inizio));
-        Intent ripropone = new Intent(c, RicevitorePromemoria.class).setAction(AZIONE_RIPROPONI)
+        Intent ripropone = new Intent(c, RicevitoreAzioni.class).setAction(AZIONE_RIPROPONI)
                 .putExtra(EXTRA_EVENTO, idEvento).putExtra(EXTRA_INIZIO, inizio).putExtra(EXTRA_FINE, fine);
         PendingIntent pi = PendingIntent.getBroadcast(c, idNotifica(idEvento, inizio), ripropone,
                 PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE);
